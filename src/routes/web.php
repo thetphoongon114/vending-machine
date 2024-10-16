@@ -10,6 +10,14 @@ return function (RoutingConfigurator $routes): void {
         ->controller([AuthController::class, 'login'])
         ->methods(['GET', 'HEAD']);
 
+    $routes->add('register', '/register')
+        ->controller([AuthController::class, 'register'])
+        ->methods(['GET', 'HEAD']);
+
+    $routes->add('postRegister', '/register')
+        ->controller([AuthController::class, 'postRegister'])
+        ->methods(['POST']);
+
     $routes->add('postLogin', '/login')
         ->controller([AuthController::class, 'postLogin'])
         ->methods(['POST']);

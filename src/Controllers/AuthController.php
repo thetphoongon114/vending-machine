@@ -36,4 +36,21 @@ class AuthController
         $_SESSION['role'] = $me['role'];
         return new RedirectResponse('/');
     }
+
+    public function register(Request $request) {
+        ob_start();
+        include '../src/Views/auth/register.php';
+        $content = ob_get_clean();
+        return new Response($content);
+    }
+
+    public function postRegister(Request $request) {
+        $email = $request->request->get('email'); 
+        $password = $request->request->get('password');
+        $name = $request->request->get('name');
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $model = new User();
+        $model->store(['name' => $name, 'email' =>  $email, 'password' => $hashedPassword]);
+        return new RedirectResponse('/login');
+    }
 }

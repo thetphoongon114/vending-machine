@@ -1,9 +1,6 @@
 <?php
 require_once __DIR__ . "/../layouts/header.php";
 ?>
-<?php if (isset($error)): ?>
-    <div class="alert alert-danger"><?= $error ?></div>
-<?php endif; ?>
 
 <div class="row">
     <div class="col-md-6 offset-md-4">

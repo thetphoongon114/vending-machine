@@ -45,7 +45,7 @@ require_once __DIR__ . "/../../config/helpers.php";
                             <a class="nav-link active" aria-current="page" href="/login">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Register</a>
+                            <a class="nav-link" href="/register">Register</a>
                         </li>
                     <?php endif; ?>
                 </ul>
