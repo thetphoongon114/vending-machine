@@ -23,3 +23,9 @@ Follow the steps below to set up the project on your local machine.
    cd vending-machine
    composer install
    php -S localhost:8000 -t public 
+
+### Postman Collection 
+   Postman collection is available. You can import <a href="/Vending machine.json" download>this collection</a> to your Postman workspace to interact with the API.
+
+### Website URL for online test
+   You can test the vending machine system live at the following URL: [http://157.245.62.121/](http://157.245.62.121/)

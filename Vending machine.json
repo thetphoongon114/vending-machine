@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "5a987775-6160-40cc-afd4-425e5a86c2fc",
+		"name": "Vending machine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8504184",
+		"_collection_link": "https://bold-eclipse-8650.postman.co/workspace/Team-Workspace~25c6e9db-8065-4605-8800-2f86e9040658/collection/8504184-5a987775-6160-40cc-afd4-425e5a86c2fc?action=share&source=collection_link&creator=8504184"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://157.245.62.121/api/login",
+							"protocol": "http",
+							"host": [
+								"157",
+								"245",
+								"62",
+								"121"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Fetch All Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGV0LXBob28tbmdvbiIsImF1ZCI6Imh0dHA6Ly92ZW5kaW5nbWFjaGluZS5jb20iLCJpYXQiOjE3MjkwMjYyNzYuMzUzNjI0LCJleHAiOjE3MjkxMTI2NzYuMzUzNjI0LCJ1aWQiOjR9.wJJH-sw3Lcz6iw2eh7zGXBJuan9kaWLAfRV90jRbS4A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://157.245.62.121/api/products",
+							"protocol": "http",
+							"host": [
+								"157",
+								"245",
+								"62",
+								"121"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGV0LXBob28tbmdvbiIsImF1ZCI6Imh0dHA6Ly92ZW5kaW5nbWFjaGluZS5jb20iLCJpYXQiOjE3MjkwMjYyNzYuMzUzNjI0LCJleHAiOjE3MjkxMTI2NzYuMzUzNjI0LCJ1aWQiOjR9.wJJH-sw3Lcz6iw2eh7zGXBJuan9kaWLAfRV90jRbS4A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://157.245.62.121/api/products/1",
+							"protocol": "http",
+							"host": [
+								"157",
+								"245",
+								"62",
+								"121"
+							],
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
